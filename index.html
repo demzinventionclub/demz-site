@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D.E.M.Z Invention Club</title>
+<meta name="description" content="D.E.M.Z Invention Club: four 4th graders inventing the future. Our ExploraVision project site is coming soon.">
+<style>
+  :root {
+    --bg: #fff8ec;
+    --ink: #2b2250;
+    --muted: #5d5680;
+    --d: #ff6b6b;
+    --e: #f04e98;
+    --m: #2ec4b6;
+    --z: #7b61ff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17132e; --ink: #fff4de; --muted: #c4bde6; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: var(--bg);   
+    color: var(--ink);
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px 16px;
+    text-align: center;
+    background-image:
+      radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--e) 25%, transparent) 0, transparent 35%),
+      radial-gradient(circle at 85% 80%, color-mix(in srgb, var(--z) 22%, transparent) 0, transparent 35%);
+  }
+  main { max-width: 640px; width: 100%; }
+  .tiles { display: flex; gap: 12px; justify-content: center; margin-bottom: 28px; }
+  .tile {
+    width: clamp(64px, 18vw, 100px);
+    aspect-ratio: 1;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    font-size: clamp(34px, 10vw, 56px);
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 0 6px 0 rgba(0,0,0,.18);
+    animation: bob 3s ease-in-out infinite;
+  }
+  .tile:nth-child(1) { background: var(--d); }
+  .tile:nth-child(2) { background: var(--e); animation-delay: .2s; }
+  .tile:nth-child(3) { background: var(--m); animation-delay: .4s; }
+  .tile:nth-child(4) { background: var(--z); animation-delay: .6s; }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+  @media (prefers-reduced-motion: reduce) { .tile { animation: none; } }
+  h1 { font-size: clamp(30px, 8vw, 52px); margin: 0 0 6px; letter-spacing: .5px; }
+  .tag { font-size: clamp(16px, 4vw, 20px); color: var(--muted); margin: 0 0 28px; }
+  .badge {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  .about { color: var(--muted); line-height: 1.6; font-size: 17px; margin: 0 auto 28px; max-width: 520px; }
+  .names { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; font-weight: 700; margin-bottom: 8px; }
+  .names span:nth-child(1) b { color: var(--d); }
+  .names span:nth-child(2) b { color: var(--e); }
+  .names span:nth-child(3) b { color: var(--m); }
+  .names span:nth-child(4) b { color: var(--z); }
+  .names b { font-size: 1.25em; }
+  footer { margin-top: 36px; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="tiles" aria-hidden="true">
+    <div class="tile">D</div><div class="tile">E</div><div class="tile">M</div><div class="tile">Z</div>
+  </div>
+  <h1>D.E.M.Z Invention Club</h1>
+  <p class="tag">Four 4th graders. Big ideas. One team.</p>
+  <div class="badge">Coming Soon</div>
+  <p class="about">
+    We're getting ready for the ExploraVision science competition. Right now we're
+    brainstorming, and this is where we'll share our invention, our process, and what we learn along the way.
+  </p>
+  <div class="names">
+    <span><b>D</b>evanya</span>
+    <span><b>E</b>llie</span>
+    <span><b>M</b>aria</span>
+    <span><b>Z</b>ahra</span>
+  </div>
+  <footer>&copy; 2026 D.E.M.Z Invention Club</footer>
+</main>
+</body>
+</html>
